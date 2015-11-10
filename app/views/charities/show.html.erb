@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @charity.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @charity.email %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@charity.picture_url, :width => 600) if @charity.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_charity_path(@charity) %> |
+<%= link_to 'Back', charities_path %>
