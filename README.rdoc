@@ -1,15 +1,13 @@
+{<img alt='Stories in Ready' src='https://badge.waffle.io/giv2giv/lifter.png?label=ready&title=Ready' />}[https://waffle.io/giv2giv/lifter]
 = README
 
-==First, install rvm with stable ruby and rails
+===First, install rvm with stable ruby and rails using instructions from https://rvm.io
+===This will take some time.
 
-===Get the Key
-```gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3```
+===Next,
+* cd lifter
+* bundle
+* rake db:setup
+* rails s
 
-===Install rvm, ruby, rails - This will take some time.
-```\curl -sSL https://get.rvm.io | bash -s stable --rails```
-
-```cd lifter
-bundle
-rails s```
-
-and visit http://localhost:3000
+then visit http://localhost:3000
