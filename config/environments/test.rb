@@ -37,12 +37,6 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  
-  # Use Minitest for generating new tests.
-  config.generators do |g|
-    g.test_framework :minitest, spec: true
-  end
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
