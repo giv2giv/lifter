@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionController::TestCase
-  test "should get index" do
-    get :index
+  test "should get donate" do
+    get :donate
     assert_response :success
   end
 

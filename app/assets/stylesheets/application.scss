@@ -15,4 +15,23 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body{
+  background-color: rgba(212,216,212,0.2);
+}
+.navbar {
+  background-color: white;
+}
+.navbar *{
+  //color:rgba(20,210,20,1)
+  //use color 3c948b
+}
+
+.donate {
+  background-color:#3c948b;
+
+}
+.navbar-default .navbar-nav > .donate > a{
+  color:white;
+  font-weight:bold;
+}
 

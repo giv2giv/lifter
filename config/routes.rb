@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'pages#index'
+
+  resources :donations
+
+  get '/donations' => 'pages#donations'
+
+  get '/donate' => 'pages#donate'
+
+  root 'pages#home'
 
   get '/home' => 'pages#home'
 
@@ -10,13 +17,12 @@ Rails.application.routes.draw do
 
   get '/user/:id' => 'pages#profile'
 
-  get '/explore' => 'pages#explore'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'welcome#donate'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

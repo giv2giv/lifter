@@ -1,0 +1,15 @@
+<%= form_for(@newDonation) do |f| %>
+<center>
+    <div class="field">
+      <%= f.label :charity_id %><br />
+      <%= f.number_field :charity_id %><br />
+      <%= f.label :amount %><br />
+      <%= f.number_field :amount, :step => 'any' %><br />
+    </div>
+
+  <div class="actions">
+    <%= f.submit "Donate" %>
+  </div>
+  </center>
+<% end %>
+
