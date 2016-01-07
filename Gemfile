@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'acts_as_shopping_cart','~> 0.2.1'
+
 gem 'devise'
 
 gem 'bootstrap-sass' , '~>3.3.6'

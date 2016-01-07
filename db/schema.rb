@@ -11,7 +11,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224160628) do
+ActiveRecord::Schema.define(version: 20160107062801) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "tag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categorizations", force: :cascade do |t|
+    t.integer  "category_id"
+    t.integer  "charity_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "categorizations", ["category_id"], name: "index_categorizations_on_category_id"
+  add_index "categorizations", ["charity_id"], name: "index_categorizations_on_charity_id"
+
+  create_table "charities", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.decimal  "longitude"
+    t.decimal  "latitude"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.integer  "amount"
+    t.integer  "user_id"
+    t.integer  "charity_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "donations", ["charity_id"], name: "index_donations_on_charity_id"
+  add_index "donations", ["user_id", "created_at"], name: "index_donations_on_user_id_and_created_at"
+  add_index "donations", ["user_id"], name: "index_donations_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

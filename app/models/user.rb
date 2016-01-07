@@ -3,6 +3,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :donation
+  has_many :charity, through: :donation
+
   def update_with_password(params, *options)
     current_password = params.delete(:current_password)
 

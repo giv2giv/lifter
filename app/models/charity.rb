@@ -1,3 +1,4 @@
 class Charity < ActiveRecord::Base
-	mount_uploader :picture, PictureUploader
+  has_many :categorization
+  has_many :category, through: :categorization
 end

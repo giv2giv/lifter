@@ -11,6 +11,8 @@ class PagesController < ApplicationController
     else
       redirect_to root_path, :notice=> "User not found!"
     end
+
+    @donations = Donation.all
   end
   def explore
   end

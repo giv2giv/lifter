@@ -13,13 +13,17 @@
       </div>
     </div>
   </div>
+
   <div class="col-xs-6">
+    <% for @d in @donations %>
     <div class="panel panel-default">
       <div class="panel-body">
-        <p>Feed</p>
+        <p><%= "#{@d.user_id} donated #{@d.amount} dollars to #{@d.charity_id}" %></p>
       </div>
     </div>
+    <% end %>
   </div>
+
   <div class="col-xs-3">
     <div class="panel panel-default">
       <div class="panel-body">
